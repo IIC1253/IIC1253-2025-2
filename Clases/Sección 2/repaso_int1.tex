@@ -1,0 +1,287 @@
+\documentclass{beamer}
+\usepackage[spanish]{babel}
+\usepackage{tabularx,colortbl}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,stmaryrd}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{positioning}
+%Information to be included in the title page:
+\title{IIC1253 Matemáticas Discretas}
+\author{Sasha Kozachinskiy}
+\institute{DCC UC}
+\date{22.09.2025}
+\newtheorem{teorema}{Teorema}
+\newtheorem{proposicion}{Proposición}
+\newtheorem{corolario}{Corolario}
+\newtheorem{definicion}{Definición}
+\newtheorem{notacion}{Notación}
+\newtheorem{lema}{Lema}
+\newtheorem{problema}{Problema}
+\newtheorem{axioma}{Axioma}
+\newcommand{\suma}{\mathsf{suma}}
+\newcommand{\producto}{\mathsf{producto}}
+\begin{document}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+
+\end{document}
+
+\frame{\titlepage}
+\begin{frame}{Hoy...}
+\huge
+inducción matemática: números naturales, inducción, orden.
+
+\end{frame}
+
+%\begin{frame}{¿Conjuntos infinitos?}
+%\begin{itemize}
+%\pause
+%\item Nada garantiza existencia de conjuntos infinitos.
+%
+%\pause
+%\item Plan: definir números naturales...
+%
+%\pause
+%\item ...y \emph{conjunto} de los números naturales...
+%
+%\pause
+%\item ...tal que el principio  de inducción es cierto.
+%\end{itemize}
+%\end{frame}
+
+\begin{frame}{Operación sucesor}
+\begin{definicion}Sea $a$ un conjunto. Su \textbf{sucesor} es el conjunto $S(a) = a\cup \{a\}$.
+\end{definicion}
+
+\pause
+
+Ejercicio: escribir una fórmula que expresa ``$b = S(a)$'':
+
+\pause
+
+\vspace{1cm}
+
+Primeros números naturales:
+
+\[0 = \varnothing\]
+
+\[1 = S(\varnothing) = \]
+
+\[2 = S(1) = \]
+
+
+\[3 = S(2) = \]
+\end{frame}
+
+\begin{frame}{Conjuntos inductivos y infinitud}
+\begin{definicion} Un conjunto $I$ se llama \textbf{inductivo} si 
+\begin{enumerate}
+\item[a)]  $\varnothing \in I$;
+
+\item[b)] para cada $x\in I$, tenemos $S(x) \in I$.
+\end{enumerate}
+\end{definicion}
+
+\pause
+
+\begin{axioma}[de infinitud]
+Existe un conjunto inductivo.
+\end{axioma}
+\end{frame}
+
+
+\begin{frame}{Números naturales}
+\begin{definicion} Un conjunto $n$ se llama un \textbf{número natural} si $n\in I$ para todos los conjuntos inductivos $I$.
+\end{definicion}
+\pause
+
+Ejercicio: escribir una fórmula ``$n$ es un número natural''.
+
+\pause
+
+\begin{proposicion} $0 = \varnothing$ es un número natural, y si $n$ es un número natural, entonces $S(n)$ tambíen es un número natural.
+\end{proposicion}
+
+\vspace{4cm}
+\end{frame}
+
+
+\begin{frame}{Conjunto de números naturales y principio de inducción}
+\begin{teorema}
+Existe un conjunto $\mathbb{N}$ de todos los números naturales.
+\end{teorema}
+\pause
+\begin{proof} $\mathbb{N} = \{n\in I\mid \text{$n$ es un número natural}\}$ para cualquier conjunto inductivo $I$.
+\end{proof}
+
+\pause
+
+\begin{teorema}[Principio de inducción]
+Sea $A$ un subconjunto de $\mathbb{N}$ tal que 
+\begin{enumerate}
+\item[a)]  $0  \in A$;
+
+\item[b)] para cada $n\in A$, tenemos $S(n) = n + 1 \in A$.
+\end{enumerate}
+Entonces, $A = \mathbb{N}$.
+\end{teorema}
+\pause 
+\begin{proof} $A$ es inductivo, por lo tanto $\mathbb{N}\subseteq A$. Ya que $A\subseteq \mathbb{N}$, obtenemos $A = \mathbb{N}$.
+\end{proof}
+
+\end{frame}
+
+
+\begin{frame}{Orden}
+
+\begin{definicion} Sean $n,m$ dos números naturales. Entonces, $n<m$ si $n\in m$.
+\end{definicion}
+
+\begin{teorema}[Propiedades de orden]
+\begin{itemize}
+\item[a)] $\lnot (n < n)$ para todos los números naturales $n$;
+\item[b)] $n < S(n)$ para todos los números naturales $n$;
+\item[c)] $0 < n$ o $0 = n$ para todos los números naturales $n$;
+\item[d)] $((n < m) \land (m < k)) \to (n < k)$ para todos los números naturales $n,m,k$;
+\item[e)] $(n < m) \lor (m < n) \lor (n = m)$ para todos los números naturales $n,m$;
+\item[f)] no existen dos números naturales $n,m$ tal que $n < m < S(n)$.
+\end{itemize}
+\end{teorema}
+\end{frame}
+
+\begin{frame}
+\begin{proposicion}  $0 < n$ o $0 = n$ para todos los números naturales $n$.
+\end{proposicion}
+
+
+
+
+\vspace{5cm}
+\end{frame}
+
+
+\begin{frame}
+\begin{proposicion}  $((n < m) \land (m < k)) \to (n < k)$ para todos los números naturales $n,m,k$;
+\end{proposicion}
+
+\pause 
+
+\begin{definicion} Un conjunto $a$ se llama \textbf{transitivo} si $c\in b \in a \implies c\in a$ para todos los conjuntos $b,c$.
+\end{definicion}
+
+\pause
+
+\begin{proposicion}  Todos los números naturales son transitivos.
+\end{proposicion}
+
+\vspace{2cm}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+\begin{frame}%{Conclusión}
+
+%Se puede definir la suma y el producto cómo subconjuntos de $\mathbb{N}^3$, números racionales cómo pares, números reales cómo \emph{funciones} $f\colon\mathbb{N} \to\mathbb{Q}$, etc...
+
+%\pause
+\begin{center}
+\huge
+¡Gracias!
+\end{center}
+\end{frame}
+\end{document}
+
